@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json());
 
 // app.use(express.static(path.join(__dirname, '../client', 'build')));
+app.get('/', async (req, res) => {
+    res.send("Hello World")
+});
+
 app.get('/api/posts', async (req, res) => {
     res.status(200).json({
         status: 'success',
